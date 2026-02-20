@@ -1,0 +1,558 @@
+/* 1. ASOSIY HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+/* 2. KONTEYNER */
+.headerContainer {
+    width: 95%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 35px;
+    /* Restored symmetrical padding to keep Nav in place */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    background: #ffffff;
+    border-radius: 100px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    height: 70px;
+    position: relative;
+    z-index: 1000;
+}
+
+/* 3. LOGOTIP */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    left: -35px;
+    /* Visually moves logo left without pushing the Nav list */
+}
+
+.logoImage {
+    transition: all 0.4s ease;
+    width: 180px;
+    /* Increased to make it more visible */
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* 4. SCROLL BO'LGANDAGI HOLAT */
+.headerScrolled {
+    padding: 0;
+}
+
+.headerScrolled .headerContainer {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    height: 75px;
+    /* Slightly thinner when scrolled */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.headerScrolled .logoImage {
+    width: 140px;
+}
+
+/* 5. NAVIGATSIYA */
+.nav {
+    flex-grow: 1;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav ul li {
+    position: relative;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 0;
+    /* Reduced vertical padding */
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 40px;
+    /* Fixed height for consistent underline position */
+}
+
+.nav ul li a:hover {
+    color: #4bcc5a;
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Active indicator like in screenshot */
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    /* Sticks to the bottom of the 40px link area */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #4bcc5a;
+    transition: width 0.3s ease;
+    border-radius: 100px;
+}
+
+/* 6. O'NG TOMONDAGI TUGMALAR */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.secondaryActions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.searchBtn {
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+
+.searchBtn:hover {
+    color: #4bcc5a;
+}
+
+.langWrapper {
+    position: relative;
+}
+
+.langBtn {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #1a1a1a;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.langBtn:hover {
+    border-color: #4bcc5a;
+    color: #4bcc5a;
+}
+
+.loginBtn {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.getStartedBtn {
+    text-decoration: none;
+    background: #4bcc5a;
+    color: #000000;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(75, 204, 90, 0.2);
+}
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.primaryActions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 260px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    padding: 15px 0;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.dropdown a {
+    color: #1a1a1a !important;
+    padding: 10px 25px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    transition: all 0.2s ease !important;
+}
+
+.dropdown a::after {
+    display: none !important;
+}
+
+.dropdown a:hover {
+    background: #f8fafc !important;
+    color: #4bcc5a !important;
+    padding-left: 30px !important;
+}
+
+/* Search Container */
+.searchContainer {
+    overflow: hidden;
+    background: #f5f5f7;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.searchInput {
+    background: none;
+    border: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    color: #1a1a1a;
+}
+
+/* Language Dropdown */
+.langWrapper {
+    position: relative;
+}
+
+.langDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    min-width: 140px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 100;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.langDropdown button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.langDropdown button:hover {
+    background: rgba(75, 204, 90, 0.08);
+    color: #4bcc5a;
+}
+
+.activeLang {
+    color: #4bcc5a !important;
+    background: rgba(75, 204, 90, 0.05) !important;
+}
+
+/* 7. MOBIL VERSIYA */
+.mobileResumeBtn {
+    display: none;
+    text-decoration: none;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.mobileResumeBtn:hover {
+    background: #333;
+}
+
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Animated Hamburger */
+.hamburger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background: #1a1a1a;
+    border-radius: 2px;
+    transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center;
+}
+
+.hamburgerOpen span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+    background: #1a3c2a;
+}
+
+.hamburgerOpen span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburgerOpen span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+    background: #1a3c2a;
+}
+
+/* Mobile Menu — Full Screen Curtain */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1a3c2a;
+    z-index: 999;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px 40px;
+}
+
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.mobileNavLink {
+    display: block;
+    padding: 18px 10px;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobileNavLink:hover {
+    color: #4bcc5a;
+    padding-left: 15px;
+}
+
+/* Mobile Menu Footer */
+.mobileMenuFooter {
+    padding: 25px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+}
+
+.mobileMenuLang {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.mobileLangBtn {
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobileLangBtn:hover {
+    border-color: #4bcc5a;
+    color: #4bcc5a;
+}
+
+.mobileLangActive {
+    background: #4bcc5a !important;
+    color: #ffffff !important;
+    border-color: #4bcc5a !important;
+}
+
+.mobileMenuActions {
+    display: flex;
+    gap: 12px;
+}
+
+.mobileLoginBtn {
+    flex: 1;
+    text-align: center;
+    padding: 16px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobileLoginBtn:hover {
+    border-color: #4bcc5a;
+    color: #4bcc5a;
+}
+
+.mobileGetStartedBtn {
+    flex: 1;
+    text-align: center;
+    padding: 16px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1a3c2a;
+    background: #4bcc5a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(75, 204, 90, 0.3);
+}
+
+.mobileGetStartedBtn:hover {
+    background: #5dda6b;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1150px) {
+
+    .nav,
+    .divider,
+    .primaryActions,
+    .secondaryActions {
+        display: none;
+    }
+
+    .mobileToggle,
+    .mobileResumeBtn {
+        display: flex;
+    }
+
+    .headerContainer {
+        padding: 0 20px;
+    }
+
+    .logo {
+        left: 0;
+        overflow: visible;
+    }
+
+    .logoImage {
+        width: 160px;
+    }
+
+    .actions {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .headerContainer {
+        padding: 0 15px;
+        height: 60px;
+    }
+
+    .logoImage {
+        width: 140px;
+    }
+
+    .mobileResumeBtn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .mobileMenu {
+        top: 75px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .mobileNavLink {
+        padding: 13px 25px;
+        font-size: 16px;
+    }
+}

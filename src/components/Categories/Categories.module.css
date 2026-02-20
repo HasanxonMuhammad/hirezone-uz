@@ -1,0 +1,50 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.categoryCard {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.categoryCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+    width: 70px;
+    height: 70px;
+    background: var(--bg-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.categoryCard:hover .iconWrapper {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.categoryCard h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.categoryCard span {
+    font-size: 14px;
+    color: var(--text);
+}

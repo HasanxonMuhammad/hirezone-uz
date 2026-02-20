@@ -1,0 +1,138 @@
+/* --- FOOTER ASOSIY --- */
+.footer {
+    background: var(--dark);
+    color: #a5a5a5;
+    padding: 80px 0 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+/* --- FOOTER LOGO (TUZATILGAN) --- */
+.footer .logo {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+
+.footer .logoImage {
+    width: 180px;
+    /* Matching Header logo size */
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    position: relative;
+    left: -35px;
+    /* Same overflow effect as Header */
+    transition: transform 0.3s ease;
+}
+
+.footer .logoImage:hover {
+    transform: scale(1.05);
+}
+
+/* --- ABOUT VA BOSHQA ELEMENTLAR --- */
+.about p {
+    line-height: 1.8;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.links h3,
+.contact h3 {
+    color: var(--white);
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.links ul li {
+    margin-bottom: 12px;
+}
+
+.links ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* --- FOOTER BOTTOM --- */
+.bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.bottomLinks a:hover {
+    color: var(--primary);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .logo {
+        left: 0;
+        margin: 0 auto 20px;
+        /* Mobil versiyada markazlash */
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

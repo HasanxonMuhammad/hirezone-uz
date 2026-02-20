@@ -1,0 +1,111 @@
+.bottomNav {
+    position: fixed;
+    bottom: 20px;
+    left: 20%;
+    right: 20%;
+    height: 54px;
+    /* More compact height */
+    background: rgba(28, 33, 39, 0.9);
+    /* Slightly more solid TG style */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    /* More rounded capsule */
+    z-index: 1000;
+    padding: 0 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #949ba2;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.active {
+    color: #4bcc5a;
+}
+
+/* Compact active indicator */
+.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(75, 204, 90, 0.1);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.active .iconWrapper {
+    transform: scale(1.1);
+}
+
+.special {
+    flex: 1.1;
+}
+
+.special .iconWrapper {
+    background: #4bcc5a;
+    color: #0d1f14;
+    width: 42px;
+    /* Smaller special button */
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(75, 204, 90, 0.3);
+}
+
+.special:active .iconWrapper {
+    transform: scale(0.9);
+}
+
+@media (max-width: 1150px) {
+    .bottomNav {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .bottomNav {
+        left: 10%;
+        right: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bottomNav {
+        left: 15px;
+        right: 15px;
+    }
+}
+
+@media (min-width: 1151px) {
+    .bottomNav {
+        display: none;
+    }
+}

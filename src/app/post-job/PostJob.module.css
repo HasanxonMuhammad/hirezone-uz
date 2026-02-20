@@ -1,0 +1,83 @@
+.postJobPage {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.formCard {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.formCard h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.sectionHeader {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0fdf4;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.fullWidth {
+    grid-column: span 2;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputGroup label {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    border-color: var(--primary);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fullWidth {
+        grid-column: span 1;
+    }
+}

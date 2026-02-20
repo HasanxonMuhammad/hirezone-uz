@@ -1,0 +1,73 @@
+.candidatesPage {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.banner {
+    background: var(--secondary);
+    padding: 60px 0;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.candidateCard {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.candidateCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border: 3px solid #f0fdf4;
+}
+
+.candidateCard h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--secondary);
+}
+
+.title {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.meta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.viewBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}

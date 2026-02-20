@@ -1,0 +1,72 @@
+.scrollTopWrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.progressCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.progressCircleBg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progressCircleValue {
+    stroke: #4bcc5a;
+    /* Matching branding green */
+    stroke-linecap: round;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: #1a3c2a;
+    /* Dark branding green */
+    color: #4bcc5a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.scrollTopWrapper:hover .icon {
+    background: #4bcc5a;
+    color: #1a3c2a;
+    transform: translateY(-5px);
+}
+
+.scrollTopWrapper:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1150px) {
+    .scrollTopWrapper {
+        bottom: 110px !important;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        z-index: 1100;
+    }
+
+    .icon {
+        width: 42px;
+        height: 42px;
+    }
+}

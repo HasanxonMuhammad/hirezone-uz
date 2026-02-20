@@ -1,0 +1,431 @@
+export const translations = {
+    en: {
+        nav: {
+            home: "Home",
+            about: "About",
+            solutions: "Solutions",
+            forBusiness: "For Business",
+            forEmployees: "For Employees",
+            recruitment: "Recruitment",
+            consulting: "Consulting",
+            outsourcing: "Outsourcing",
+            contact: "Contact",
+            login: "Log In",
+            getStarted: "Get Started",
+            hireTalent: "Hire Talent",
+            findJob: "Find Job"
+        },
+        hero: {
+            title: "Professional Solutions for",
+            titleSpan: "Business and Career",
+            subtitle: "We help companies find the best specialists, and candidates find their dream jobs.",
+            hireTalent: "Hire Talent",
+            findJob: "Find Job",
+            trustedBy: "Trusted by 500+ companies",
+            activeJobs: "Active Jobs",
+            companies: "Companies",
+            candidates: "Candidates",
+            searchPlaceholder: "Job title or keyword...",
+            locationPlaceholder: "City or remote...",
+            categoryPlaceholder: "Category",
+            searchBtn: "Search Jobs"
+        },
+        stats: {
+            activeJobs: "Active Jobs",
+            companies: "Companies",
+            candidates: "Candidates",
+            successRate: "Success Rate"
+        },
+        avatars: {
+            hrManager: "HR Manager",
+            businessOwner: "Business Owner",
+            recruiter: "Senior Recruiter",
+            expert: "HR Expert"
+        },
+        userChoice: {
+            workersTitle: "For Employees",
+            workersText: "Find the best jobs that match your skills",
+            businessTitle: "For Business",
+            businessText: "Hire the strongest specialists for your company",
+            findWork: "Find Work",
+            findEmployee: "Hire Employees"
+        },
+        aboutSection: {
+            badge: "ABOUT US",
+            title: "The Leading HR Solutions",
+            titleSpan: "Platform",
+            description: "This staffing platform provides access to a diverse pool of qualified candidates with specialized skills in areas such as management.",
+            point1: "This helps businesses maintain service excellence",
+            point2: "This scalability allows businesses to adjust staffing",
+            watchVideo: "Watch Video"
+        },
+        latestJobs: {
+            title: "Latest",
+            titleSpan: "Job Openings",
+            subtitle: "Find your next challenge in our curated list of high-quality career opportunities.",
+            applyNow: "Apply Now",
+            browseAll: "Browse All Jobs",
+            fullTime: "Full Time",
+            contract: "Contract",
+            partTime: "Part Time"
+        },
+        whyChooseUs: {
+            badge: "WHY US",
+            title: "Why Choose Us",
+            card1Title: "Retain Top Talent",
+            card1Text: "Providing clear career paths and growth opportunities is key to retaining top talent.",
+            card2Title: "Stay Compliant",
+            card2Text: "Educate employees about compliance requirements through regular training",
+            card3Title: "Improve Employee",
+            card3Text: "Invest in employee training and development programs to enhance skills and knowledge.",
+            learnMore: "Learn More"
+        },
+        industries: {
+            badge: "INDUSTRIES",
+            title: "Industries Served",
+            viewAll: "View All Categories",
+            itTech: "IT & Tech",
+            hrRecruitment: "HR & Recruitment",
+            businessSystems: "Business Systems",
+            salesMarketing: "Sales & Marketing",
+            financeAudit: "Finance & Audit",
+            logistics: "Logistics",
+            customerService: "Customer Service",
+            manufacturing: "Manufacturing",
+            staffs: "Experts"
+        },
+        howItWorks: {
+            badge: "PROCESS",
+            title: "How It Works?",
+            forTalents: "For Talents",
+            forBusiness: "For Business",
+            talentStep1Title: "Build Your Profile",
+            talentStep1Text: "Create a standout profile and AI-powered resume in minutes to showcase your expertise.",
+            talentStep2Title: "Explore Opportunities",
+            talentStep2Text: "Browse thousands of jobs and apply with one click to top companies using our smart filters.",
+            talentStep3Title: "Start Your Career",
+            talentStep3Text: "Get hired, manage your work dashboard, and scale your professional growth seamlessly.",
+            businessStep1Title: "HR Audit & Consulting",
+            businessStep1Text: "We analyze your current hiring process and build a custom systemization plan for your team.",
+            businessStep2Title: "AI-Powered Selection",
+            businessStep2Text: "Access our pool of pre-vetted experts and use AI to match the best talent with your needs.",
+            businessStep3Title: "Systemize & Scale",
+            businessStep3Text: "Automate your HR operations, manage documents, and scale your business with total control."
+        },
+        resumeBuilder: {
+            badge: "RESUME BUILDER",
+            title: "Professional Resume in",
+            titleSpan: "Minutes",
+            description: "Create a standout resume with our AI-powered builder. Choose from premium templates and export to PDF instantly.",
+            cta: "Create My Resume",
+            features: [
+                "AI-Powered Writing",
+                "Professional Templates",
+                "Instant PDF Export",
+                "100% Free & Open Source"
+            ]
+        },
+        footer: {
+            about: "Largest job portal for professionals in Uzbekistan. Find your dream job or the best talent for your company.",
+            forCandidates: "For Candidates",
+            forEmployers: "For Employers",
+            reachUs: "Reach Us",
+            browseJobs: "Browse Jobs",
+            candidateDashboard: "Candidate Dashboard",
+            jobAlerts: "Job Alerts",
+            bookmarks: "Bookmarked Jobs",
+            postJob: "Post a Job",
+            browseCandidates: "Browse Candidates",
+            employerDashboard: "Employer Dashboard",
+            pricing: "Pricing Plans",
+            rights: "All Rights Reserved."
+        }
+    },
+    uz: {
+        nav: {
+            home: "Bosh sahifa",
+            about: "Biz haqimizda",
+            solutions: "Yechimlar",
+            forBusiness: "Biznes uchun",
+            forEmployees: "Xodimlar uchun",
+            recruitment: "Xodimlarni yollash",
+            consulting: "Biznes konsalting",
+            outsourcing: "HR-autsorsing",
+            contact: "Aloqa",
+            login: "Kirish",
+            getStarted: "Boshlash",
+            hireTalent: "Ishchi yollash",
+            findJob: "Ish topish"
+        },
+        hero: {
+            title: "Biznes va Karyera uchun",
+            titleSpan: "Professional Yechimlar",
+            subtitle: "Biz kompaniyalarga eng yaxshi mutaxassislarni topishda, nomzodlarga esa orzusidagi ishga joylashishda yordam beramiz.",
+            hireTalent: "Ishchi yollash",
+            findJob: "Ish topish",
+            trustedBy: "500+ dan ortiq kompaniyalar ishonchi",
+            activeJobs: "Vakansiyalar",
+            companies: "Kompaniyalar",
+            candidates: "Nomzodlar",
+            searchPlaceholder: "Lavozim yoki kalit so'z...",
+            locationPlaceholder: "Shahar yoki masofaviy...",
+            categoryPlaceholder: "Soha",
+            searchBtn: "Qidirish"
+        },
+        stats: {
+            activeJobs: "Faol vakansiyalar",
+            companies: "Kompaniyalar",
+            candidates: "Nomzodlar",
+            successRate: "Muvaffaqiyat darajasi"
+        },
+        avatars: {
+            hrManager: "HR-menejer",
+            businessOwner: "Biznes egasi",
+            recruiter: "Katta rekruter",
+            expert: "HR-ekspert"
+        },
+        userChoice: {
+            workersTitle: "Xodimlar uchun",
+            workersText: "O'z mahoratingizga mos keladigan eng yaxshi vakansiyalarni toping",
+            businessTitle: "Biznes uchun",
+            businessText: "Kompaniyangiz uchun eng kuchli mutaxassislarni yollang",
+            findWork: "Ish topish",
+            findEmployee: "Xodim yollash"
+        },
+        aboutSection: {
+            badge: "BIZ HAQIMIZDA",
+            title: "Eng yetakchi HR yechimlari",
+            titleSpan: "Platformasi",
+            description: "Ushbu platforma menejment kabi sohalarda maxsus ko'nikmalarga ega bo'lgan malakali nomzodlarning turli xil bazasidan foydalanish imkonini beradi.",
+            point1: "Bu biznesga xizmat ko'rsatish sifatini yuqori darajada saqlashga yordam beradi",
+            point2: "Ushbu kengayish biznesga xodimlarni moslashuvchan boshqarish imkonini beradi",
+            watchVideo: "Videoni ko'rish"
+        },
+        latestJobs: {
+            title: "So'nggi",
+            titleSpan: "Ish Vakansiyalari",
+            subtitle: "Yuqori sifatli karyera imkoniyatlari ro'yxatidan keyingi vazifangizni toping.",
+            applyNow: "Hozir topshirish",
+            browseAll: "Barcha vakansiyalar",
+            fullTime: "To'liq stavka",
+            contract: "Shartnoma asosida",
+            partTime: "Yarim stavka"
+        },
+        whyChooseUs: {
+            badge: "NEGA BIZ",
+            title: "Nega Bizni Tanlashadi",
+            card1Title: "Iste'dodlarni Saqlab Qolish",
+            card1Text: "Aniq martaba yo'llari va o'sish imkoniyatlarini taqdim etish iste'dodlarni saqlab qolishning kalitidir.",
+            card2Title: "Muvofiqlikni Saqlash",
+            card2Text: "Xodimlarni muntazam treninglar orqali muvofiqlik talablari haqida xabardor qilish",
+            card3Title: "Xodimlarni Rivojlantirish",
+            card3Text: "Ko'nikma va bilimlarni oshirish uchun xodimlarni o'qitish va rivojlantirish dasturlariga sarmoya kiritish.",
+            learnMore: "Batafsil"
+        },
+        industries: {
+            badge: "YONALISHLAR",
+            title: "Xizmat Ko'rsatish Sohalari",
+            viewAll: "Barcha toifalarni ko'rish",
+            itTech: "IT & Texnologiyalar",
+            hrRecruitment: "HR & Rekrutment",
+            businessSystems: "Biznes Tizimlari",
+            salesMarketing: "Savdo & Marketing",
+            financeAudit: "Moliya & Audit",
+            logistics: "Logistika",
+            customerService: "Mijozlarga xizmat ko'rsatish",
+            manufacturing: "Ishlab chiqarish",
+            staffs: "Mutaxassislar"
+        },
+        howItWorks: {
+            badge: "JARAYON",
+            title: "U qanday ishlaydi?",
+            forTalents: "Nomzodlar uchun",
+            forBusiness: "Biznes uchun",
+            talentStep1Title: "Profil yarating",
+            talentStep1Text: "Bir necha daqiqada professional profil va SI yordamida rezyume yarating.",
+            talentStep2Title: "Vakansiyalarni toping",
+            talentStep2Text: "Minglab vakansiyalar ichidan o'zingizga mosini toping va bir tugma bilan topshiring.",
+            talentStep3Title: "Ishni boshlang",
+            talentStep3Text: "Orzuingizdagi ishga kirib, karyerangizni yangi bosqichga ko'taring.",
+            businessStep1Title: "HR Audit va Konsalting",
+            businessStep1Text: "Sizning jamoangiz va jarayonlaringizni tahlil qilib, tizimlashtirish rejasini tuzamiz.",
+            businessStep2Title: "SI orqali tanlov",
+            businessStep2Text: "Oldindan tekshirilgan mutaxassislar bazasidan o'zingizga mosini aqlli filtrlash orqali toping.",
+            businessStep3Title: "Tizimlash va o'sish",
+            businessStep3Text: "HR jarayonlarni avtomatlashtiring, hujjatlar bilan ishlashni osonlashtiring va biznesni o'stiring."
+        },
+        resumeBuilder: {
+            badge: "REZYUME BUILDER",
+            title: "Daqiqalar ichida",
+            titleSpan: "Professional Rezyume",
+            description: "Bizning SI (Sun'iy intellekt) builderimiz bilan professional rezyume yarating. Premium shablonlardan birini tanlang va PDF shaklida yuklab oling.",
+            cta: "Rezyume yaratish",
+            features: [
+                "SI orqali yozish",
+                "Professional shablonlar",
+                "Tezkor PDF eksport",
+                "100% Bepul va Ochiq kodli"
+            ]
+        },
+        footer: {
+            about: "O'zbekistondagi mutaxassislar uchun eng yirik ish portali. Orzuingizdagi ishni yoki kompaniyangiz uchun eng yaxshi iste'dodlarni toping.",
+            forCandidates: "Nomzodlar uchun",
+            forEmployers: "Ish beruvchilar uchun",
+            reachUs: "Biz bilan bog'lanish",
+            browseJobs: "Vakansiyalarni ko'rish",
+            candidateDashboard: "Nomzod paneli",
+            jobAlerts: "Ish bildirishnomalari",
+            bookmarks: "Saqlangan ishlar",
+            postJob: "E'lon berish",
+            browseCandidates: "Nomzodlarni qidirish",
+            employerDashboard: "Ish beruvchi paneli",
+            pricing: "Tariflar",
+            rights: "Barcha huquqlar himoyalangan."
+        }
+    },
+    ru: {
+        nav: {
+            home: "Главная",
+            about: "О нас",
+            solutions: "Решения",
+            forBusiness: "Для бизнеса",
+            forEmployees: "Для сотрудников",
+            recruitment: "Подбор персонала",
+            consulting: "Бизнес консалтинг",
+            outsourcing: "HR-аутсорсинг",
+            contact: "Контакты",
+            login: "Войти",
+            getStarted: "Начать",
+            hireTalent: "Нанять сотрудника",
+            findJob: "Найти работу"
+        },
+        hero: {
+            title: "Профессиональные решения для",
+            titleSpan: "Бизнеса и Карьеры",
+            subtitle: "Мы помогаем компаниям находить лучших специалистов, а кандидатам — работу своей мечты.",
+            hireTalent: "Нанять сотрудника",
+            findJob: "Найти работу",
+            trustedBy: "Доверяют 500+ компаний",
+            activeJobs: "Вакансии",
+            companies: "Компании",
+            candidates: "Кандидаты",
+            searchPlaceholder: "Должность или ключевое слово...",
+            locationPlaceholder: "Город или удалённо...",
+            categoryPlaceholder: "Категория",
+            searchBtn: "Найти"
+        },
+        stats: {
+            activeJobs: "Активные вакансии",
+            companies: "Компании",
+            candidates: "Кандидаты",
+            successRate: "Успешность"
+        },
+        avatars: {
+            hrManager: "HR-менеджер",
+            businessOwner: "Владелец бизнеса",
+            recruiter: "Старший рекрутер",
+            expert: "HR-эксперт"
+        },
+        userChoice: {
+            workersTitle: "Для сотрудников",
+            workersText: "Найдите лучшие вакансии, соответствующие вашим навыкам",
+            businessTitle: "Для бизнеса",
+            businessText: "Наймите сильнейших специалистов для вашей компании",
+            findWork: "Найти работу",
+            findEmployee: "Нанять сотрудников"
+        },
+        aboutSection: {
+            badge: "О НАС",
+            title: "Ведущая платформа HR-решений",
+            titleSpan: "Платформа",
+            description: "Эта кадровая платформа обеспечивает доступ к разнообразному пулу квалифицированных кандидатов со специальными навыками в таких областях, как менеджмент.",
+            point1: "Это помогает предприятиям поддерживать высокое качество обслуживания",
+            point2: "Эта масштабируемость позволяет предприятиям регулировать численность персонала",
+            watchVideo: "Смотреть видео"
+        },
+        latestJobs: {
+            title: "Последние",
+            titleSpan: "Вакансии",
+            subtitle: "Найдите свой следующий вызов в нашем кураторском списке высококачественных карьерных возможностей.",
+            applyNow: "Подать заявку",
+            browseAll: "Все вакансии",
+            fullTime: "Полный рабочий день",
+            contract: "По контракту",
+            partTime: "Частичная занятость"
+        },
+        whyChooseUs: {
+            badge: "ПОЧЕМУ МЫ",
+            title: "Почему выбирают нас",
+            card1Title: "Удержание талантов",
+            card1Text: "Предоставление четких карьерных путей и возможностей для роста является ключом к удержанию лучших талантов.",
+            card2Title: "Соблюдение стандартов",
+            card2Text: "Обучайте сотрудников требованиям комплаенса через регулярные тренинги",
+            card3Title: "Развитие сотрудников",
+            card3Text: "Инвестируйте в программы обучения и развития сотрудников для повышения их навыков и знаний.",
+            learnMore: "Подробнее"
+        },
+        industries: {
+            badge: "ОТРАСЛИ",
+            title: "Отрасли, которые мы обслуживаем",
+            viewAll: "Посмотреть все категории",
+            itTech: "IT и Технологии",
+            hrRecruitment: "HR и Рекрутмент",
+            businessSystems: "Бизнес Системы",
+            salesMarketing: "Продажи и Маркетинг",
+            financeAudit: "Финансы и Аудит",
+            logistics: "Логистика",
+            customerService: "Обслуживание клиентов",
+            manufacturing: "Производство",
+            staffs: "Специалистов"
+        },
+        howItWorks: {
+            badge: "ПРОЦЕСС",
+            title: "Как это работает?",
+            forTalents: "Для талантов",
+            forBusiness: "Для бизнеса",
+            talentStep1Title: "Создайте профиль",
+            talentStep1Text: "Создайте выделяющийся профиль и ИИ-резюме за считанные минуты.",
+            talentStep2Title: "Найдите вакансии",
+            talentStep2Text: "Ищите среди тысяч вакансий и подавайте заявки в ведущие компании в один клик.",
+            talentStep3Title: "Начните карьеру",
+            talentStep3Text: "Устройтесь на работу мечты и масштабируйте свой профессиональный рост.",
+            businessStep1Title: "HR Аудит и Консалтинг",
+            businessStep1Text: "Мы анализируем текущие процессы и строим план систематизации вашей команды.",
+            businessStep2Title: "ИИ-отбор кандидатов",
+            businessStep2Text: "Получите доступ к базе проверенных экспертов и используйте ИИ для идеального соответствия.",
+            businessStep3Title: "Систематизация и Рост",
+            businessStep3Text: "Автоматизируйте HR-операции, управляйте документами и масштабируйте бизнес с полным контролем."
+        },
+        resumeBuilder: {
+            badge: "РЕЗЮМЕ БИЛДЕР",
+            title: "Профессиональное резюме за",
+            titleSpan: "Минуты",
+            description: "Создайте выдающееся резюме с помощью нашего ИИ-билдера. Выбирайте премиум-шаблоны и экспортируйте в PDF мгновенно.",
+            cta: "Создать резюме",
+            features: [
+                "ИИ-написание текста",
+                "Профессиональные шаблоны",
+                "Мгновенный экспорт в PDF",
+                "100% Бесплатно и открытый код"
+            ]
+        },
+        footer: {
+            about: "Крупнейший портал по поиску работы для профессионалов в Узбекистане. Найдите работу своей мечты или лучшие таланты для вашей компании.",
+            forCandidates: "Для кандидатов",
+            forEmployers: "Для работодателей",
+            reachUs: "Свяжитесь с нами",
+            browseJobs: "Просмотр вакансий",
+            candidateDashboard: "Панель кандидата",
+            jobAlerts: "Оповещения о работе",
+            bookmarks: "Сохраненные вакансии",
+            postJob: "Разместить вакансию",
+            browseCandidates: "Поиск кандидатов",
+            employerDashboard: "Панель работодателя",
+            pricing: "Тарифные планы",
+            rights: "Все права защищены."
+        }
+    }
+};
+
+export type Language = 'en' | 'uz' | 'ru';
+export type TranslationType = typeof translations.en;

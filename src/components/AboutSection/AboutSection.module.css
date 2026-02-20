@@ -1,0 +1,303 @@
+.about {
+    padding: 120px 0;
+    background-color: #fafafa;
+    /* Slightly off-white for better contrast */
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.visualSide {
+    flex: 1.1;
+    /* Give visual side slightly more weight */
+    position: relative;
+    padding: 40px;
+    /* Space for the stack to expand */
+}
+
+/* Enhanced Layered Stack Effect */
+.imageStack {
+    position: relative;
+    z-index: 2;
+}
+
+.imageWrapper {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    aspect-ratio: 16 / 11;
+    z-index: 3;
+    border: 8px solid #fff;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.imageWrapper:hover img {
+    transform: scale(1.05);
+}
+
+.layer1,
+.layer2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.layer1 {
+    z-index: 2;
+    transform: translate(-45%, -55%) rotate(-4deg);
+    opacity: 0.9;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(rgba(0, 191, 99, 0.1), rgba(0, 191, 99, 0.1)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&h=400&fit=crop');
+}
+
+.layer2 {
+    z-index: 1;
+    transform: translate(-55%, -45%) rotate(4deg);
+    opacity: 0.6;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.1)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=400&fit=crop');
+}
+
+.videoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    /* Slightly lighter for clarity */
+    cursor: pointer;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(0px);
+    /* Sharp by default */
+}
+
+.videoOverlay:hover {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+    /* Blur only on hover for focus effect */
+}
+
+.playBtn {
+    width: 85px;
+    height: 85px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 191, 99, 0.3);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.videoOverlay:hover .playBtn {
+    transform: scale(1.1);
+}
+
+.playBtn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    animation: rotate 12s linear infinite;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.playBtn svg {
+    color: #fff;
+    fill: currentColor;
+    margin-left: 5px;
+}
+
+.watchText {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contentSide {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #fff;
+    color: var(--primary);
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 191, 99, 0.1);
+}
+
+.title {
+    font-size: 52px;
+    font-weight: 850;
+    color: #0f172a;
+    /* Richer Slate Black */
+    line-height: 1.15;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.title span {
+    color: var(--primary);
+    position: relative;
+    z-index: 1;
+}
+
+.title span::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: rgba(0, 191, 99, 0.1);
+    z-index: -1;
+}
+
+.description {
+    color: #64748b;
+    /* Slate Gray */
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-weight: 450;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.checkIcon {
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 15px rgba(0, 191, 99, 0.2);
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.modalContent {
+    width: 90%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.closeBtn:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+}
