@@ -20,6 +20,40 @@ export async function GET(request: Request) {
         if (fs.existsSync(VACANCIES_JSON_PATH)) {
             const raw = fs.readFileSync(VACANCIES_JSON_PATH, 'utf-8');
             vacancies = JSON.parse(raw);
+        } else {
+            // Default demo vacancies if file doesn't exist (e.g. on Vercel)
+            vacancies = [
+                {
+                    id: 1,
+                    is_active: 1,
+                    title_uz: 'Administrator (Reception)',
+                    title_ru: 'Администратор (Ресепшн)',
+                    description_uz: '🏢 Magnat HR\n💰 Maosh: Kellshiladi\n📍 Manzil: Toshkent shahri, Chilonzor',
+                    description_ru: '🏢 Magnat HR\n💰 Зарплата: Договорная\n📍 Адрес: Ташкент, Чиланзар',
+                    location: 'Toshkent',
+                    created_at: new Date().toISOString()
+                },
+                {
+                    id: 2,
+                    is_active: 1,
+                    title_uz: 'Sotuv menejeri',
+                    title_ru: 'Менеджер по продажам',
+                    description_uz: '🏢 Global Trade\n💰 Maosh: 5,000,000 - 10,000,000\n📍 Manzil: Toshkent, Yunusobod',
+                    description_ru: '🏢 Global Trade\n💰 Зарплата: 5,000,000 - 10,000,000\n📍 Адрес: Ташкент, Юнусабад',
+                    location: 'Toshkent',
+                    created_at: new Date().toISOString()
+                },
+                {
+                    id: 3,
+                    is_active: 1,
+                    title_uz: 'UI/UX Dizayner',
+                    title_ru: 'UI/UX Дизайнер',
+                    description_uz: '🏢 Creative Studio\n💰 Maosh: Kellshiladi\n📍 Manzil: Masofaviy (Remote)',
+                    description_ru: '🏢 Creative Studio\n💰 Зарплата: Договорная\n📍 Адрес: Удаленно (Remote)',
+                    location: 'Remote',
+                    created_at: new Date().toISOString()
+                }
+            ];
         }
 
         // Vakansiyalarni formatlash
