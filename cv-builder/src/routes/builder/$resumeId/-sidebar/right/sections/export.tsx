@@ -8,6 +8,7 @@ import { useResumeStore } from "@/components/resume/store/resume";
 import { Button } from "@/components/ui/button";
 import { orpc } from "@/integrations/orpc/client";
 import { downloadFromUrl, downloadWithAnchor, generateFilename } from "@/utils/file";
+import { authClient } from "@/integrations/auth/client";
 import { SectionBase } from "../shared/section-base";
 
 export function ExportSectionBuilder() {
@@ -25,7 +26,14 @@ export function ExportSectionBuilder() {
 		downloadWithAnchor(blob, filename);
 	}, [resume]);
 
+	const { data: session } = authClient.useSession();
+
 	const onDownloadPDF = useCallback(async () => {
+		if (!session) {
+			toast.error(t`You must be logged in to download your resume as a PDF.`);
+			return;
+		}
+
 		const filename = generateFilename(resume.data.basics.name, "pdf");
 		const toastId = toast.loading(t`Please wait while your PDF is being generated...`, {
 			description: t`This may take a while depending on the server capacity. Please do not close the window or refresh the page.`,
@@ -39,7 +47,7 @@ export function ExportSectionBuilder() {
 		} finally {
 			toast.dismiss(toastId);
 		}
-	}, [resume, printResumeAsPDF]);
+	}, [resume, printResumeAsPDF, session]);
 
 	return (
 		<SectionBase type="export" className="space-y-4">

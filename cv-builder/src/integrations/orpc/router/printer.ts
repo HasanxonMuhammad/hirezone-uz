@@ -4,7 +4,7 @@ import { printerService } from "../services/printer";
 import { resumeService } from "../services/resume";
 
 export const printerRouter = {
-	printResumeAsPDF: publicProcedure
+	printResumeAsPDF: protectedProcedure
 		.route({
 			method: "GET",
 			path: "/resumes/{id}/pdf",
