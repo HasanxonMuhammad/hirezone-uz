@@ -33,6 +33,56 @@
     margin-bottom: 35px;
 }
 
+.socialAuth {
+    margin-bottom: 25px;
+}
+
+.googleBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    color: #374151;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.googleBtn:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.divider span {
+    position: relative;
+    background: white;
+    padding: 0 15px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
 .form {
     text-align: left;
 }
@@ -77,6 +127,7 @@
 }
 
 .registerLink {
+    margin-top: 10px;
     font-size: 14px;
     color: var(--text);
 }

@@ -164,6 +164,30 @@ export const translations = {
                 directions: "Get Directions",
                 reportError: "Report an error"
             }
+        },
+        auth: {
+            loginTitle: "Welcome Back",
+            loginSubtitle: "Login to your account to continue",
+            email: "Email Address",
+            password: "Password",
+            forgotPassword: "Forgot password?",
+            loginBtn: "Login Now",
+            or: "or continue with",
+            google: "Sign in with Google",
+            noAccount: "Don't have an account?",
+            createAccount: "Create an account",
+            registerTitle: "Create Account",
+            registerSubtitle: "Join our professional community today",
+            candidate: "Candidate",
+            candidateText: "I am looking for a job",
+            employer: "Employer",
+            employerText: "I am hiring talent",
+            firstName: "First Name",
+            lastName: "Last Name",
+            confirmPassword: "Confirm Password",
+            registerBtn: "Register Now",
+            hasAccount: "Already have an account?",
+            loginHere: "Login here"
         }
     },
     uz: {
@@ -331,6 +355,30 @@ export const translations = {
                 directions: "Yo'nalish tuzish",
                 reportError: "Xatolik haqida xabar berish"
             }
+        },
+        auth: {
+            loginTitle: "Xush kelibsiz",
+            loginSubtitle: "Davom etish uchun hisobingizga kiring",
+            email: "Email manzili",
+            password: "Parol",
+            forgotPassword: "Parolni unutdingizmi?",
+            loginBtn: "Kirish",
+            or: "yoki",
+            google: "Google orqali kirish",
+            noAccount: "Hisobingiz yo'qmi?",
+            createAccount: "Hisob yaratish",
+            registerTitle: "Hisob yaratish",
+            registerSubtitle: "Bugun bizning professional jamoamizga qo'shiling",
+            candidate: "Nomzod",
+            candidateText: "Men ish qidiryapman",
+            employer: "Ish beruvchi",
+            employerText: "Men mutaxassis yollayman",
+            firstName: "Ism",
+            lastName: "Familiya",
+            confirmPassword: "Parolni tasdiqlang",
+            registerBtn: "Ro'yxatdan o'tish",
+            hasAccount: "Hisobingiz bormi?",
+            loginHere: "Bu yerda kiring"
         }
     },
     ru: {
@@ -498,6 +546,30 @@ export const translations = {
                 directions: "Построить маршрут",
                 reportError: "Сообщить об ошибке"
             }
+        },
+        auth: {
+            loginTitle: "С возвращением",
+            loginSubtitle: "Войдите в свой аккаунт, чтобы продолжить",
+            email: "Электронная почта",
+            password: "Пароль",
+            forgotPassword: "Забыли пароль?",
+            loginBtn: "Войти",
+            or: "или",
+            google: "Войти через Google",
+            noAccount: "Нет аккаунта?",
+            createAccount: "Создать аккаунт",
+            registerTitle: "Создать аккаунт",
+            registerSubtitle: "Присоединяйтесь к нашему сообществу сегодня",
+            candidate: "Кандидат",
+            candidateText: "Я ищу работу",
+            employer: "Работодатель",
+            employerText: "Я ищу специалистов",
+            firstName: "Имя",
+            lastName: "Фамилия",
+            confirmPassword: "Подтвердите пароль",
+            registerBtn: "Зарегистрироваться",
+            hasAccount: "Уже есть аккаунт?",
+            loginHere: "Войти здесь"
         }
     }
 };

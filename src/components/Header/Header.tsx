@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import { Language } from '@/lib/translations';
+import { useSession, signOut } from 'next-auth/react';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ const Header = () => {
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const { language, setLanguage, t } = useLanguage();
+    const { data: session } = useSession();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -171,8 +173,25 @@ const Header = () => {
                     {!isSearchOpen && <div className={styles.divider}></div>}
 
                     <div className={`${styles.primaryActions} ${isSearchOpen ? styles.primaryHidden : ''}`}>
-                        <Link href="/login" className={styles.loginBtn}>{t.nav.login}</Link>
-                        <Link href="/post-job" className={styles.getStartedBtn}>{t.nav.getStarted}</Link>
+                        {session ? (
+                            <div className={styles.userProfile}>
+                                <div className={styles.userAvatar}>
+                                    {session.user?.image ? (
+                                        <Image src={session.user.image} alt="User" width={32} height={32} />
+                                    ) : (
+                                        <div className={styles.avatarPlaceholder}>{session.user?.name?.charAt(0)}</div>
+                                    )}
+                                </div>
+                                <button onClick={() => signOut()} className={styles.logoutBtn}>
+                                    Logout
+                                </button>
+                            </div>
+                        ) : (
+                            <>
+                                <Link href="/login" className={styles.loginBtn}>{t.nav.login}</Link>
+                                <Link href="/post-job" className={styles.getStartedBtn}>{t.nav.getStarted}</Link>
+                            </>
+                        )}
                     </div>
 
                     {/* Mobile: Resume Maker CTA + Hamburger */}

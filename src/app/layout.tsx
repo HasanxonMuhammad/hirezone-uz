@@ -5,6 +5,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import Preloader from "@/components/Preloader/Preloader";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import MobileBottomNav from "@/components/MobileBottomNav/MobileBottomNav";
+import { AuthProvider } from "@/context/AuthProvider";
 
 export const metadata: Metadata = {
   title: "HireZone - O'zbekistondagi eng yirik ish e'lonlari portali",
@@ -43,10 +44,12 @@ export default function RootLayout({
     <html lang="uz" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <LanguageProvider>
-          <Preloader />
-          {children}
-          <ScrollToTop />
-          <MobileBottomNav />
+          <AuthProvider>
+            <Preloader />
+            {children}
+            <ScrollToTop />
+            <MobileBottomNav />
+          </AuthProvider>
         </LanguageProvider>
       </body>
     </html>
