@@ -19,7 +19,17 @@
 
 .logo {
     margin-bottom: 30px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.logo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
 }
 
 .card h1 {
