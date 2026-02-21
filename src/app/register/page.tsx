@@ -67,7 +67,7 @@ export default function RegisterPage() {
                 transition={{ duration: 0.5 }}
             >
                 <Link href="/" className={styles.logo}>
-                    <Image src="/logo.svg" alt="HireZone Logo" width={180} height={45} priority />
+                    <Image src="/logo.svg" alt="HireZone Logo" width={240} height={60} priority />
                 </Link>
 
                 <h1>{t.auth.registerTitle}</h1>
