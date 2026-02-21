@@ -55,7 +55,7 @@ export default function ContactPage() {
                                         </div>
                                         <div className={styles.infoText}>
                                             <h4>Corporate Office</h4>
-                                            <p>18-й тупик Заркайнар, 51<br />Tashkent, Uzbekistan</p>
+                                            <p>улица Шота Руставели, 150<br />Tashkent, Uzbekistan</p>
                                         </div>
                                     </div>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
                     <div className={styles.mapWrapper}>
                         <div className={styles.mapContainer}>
                             <iframe
-                                src="https://yandex.uz/map-widget/v1/?ll=69.237740%2C41.338570&z=16&pt=69.237740%2C41.338570%2Cpm2rdm"
+                                src="https://yandex.uz/map-widget/v1/?ll=69.223799%2C41.260000&z=16&pt=69.223799%2C41.260000%2Cpm2rdm"
                                 width="100%"
                                 height="100%"
                                 frameBorder="0"
@@ -158,31 +158,31 @@ export default function ContactPage() {
                                 transition={{ duration: 0.6, delay: 0.8 }}
                             >
                                 <div className={styles.cardHeader}>
-                                    <h3>18-й тупик Заркайнар, 51</h3>
+                                    <h3>улица Шота Руставели, 150</h3>
                                     <p>Ташкент</p>
                                     <button className={styles.closeBtn}>×</button>
                                 </div>
 
                                 <div className={styles.metroList}>
                                     <div className={styles.metroItem}>
-                                        <div className={styles.metroIcon} style={{ background: '#0070bc' }}>M</div>
-                                        <span>Чор-Су</span>
+                                        <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
+                                        <span>Чиланзар</span>
                                         <span className={styles.distance}>
-                                            <Footprints size={14} /> 1,65 км
+                                            <Footprints size={14} /> 2,45 км
                                         </span>
                                     </div>
                                     <div className={styles.metroItem}>
-                                        <div className={styles.metroIcon} style={{ background: '#0070bc' }}>M</div>
-                                        <span>Гафура Гуляма</span>
+                                        <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
+                                        <span>Алмазар</span>
                                         <span className={styles.distance}>
-                                            <Footprints size={14} /> 1,79 км
+                                            <Footprints size={14} /> 2,72 км
                                         </span>
                                     </div>
                                     <div className={styles.metroItem}>
-                                        <div className={styles.metroIcon} style={{ background: '#0070bc' }}>M</div>
-                                        <span>Тинчлик</span>
+                                        <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
+                                        <span>Мирзо Улугбек</span>
                                         <span className={styles.distance}>
-                                            <Footprints size={14} /> 2,29 км
+                                            <Footprints size={14} /> 3,4 км
                                         </span>
                                     </div>
                                 </div>
