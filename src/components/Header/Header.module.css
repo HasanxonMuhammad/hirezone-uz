@@ -37,7 +37,7 @@
     align-items: center;
     height: 100%;
     position: relative;
-    left: -50px;
+    left: -10px;
     /* Moved further left as requested */
 }
 
@@ -73,8 +73,8 @@
 /* 5. NAVIGATSIYA */
 .nav {
     flex-grow: 1;
-    margin-left: 30px;
-    /* Pushes links to the right, away from logo */
+    margin-left: 80px;
+    /* Pushed further to the right as requested */
 }
 
 .nav ul {
