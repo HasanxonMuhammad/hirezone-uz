@@ -6,8 +6,27 @@ import Footer from '@/components/Footer/Footer';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from './Contact.module.css';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function ContactPage() {
+    const { t, language } = useLanguage();
+
+    const getMapLang = () => {
+        switch (language) {
+            case 'ru': return 'ru_RU';
+            case 'uz': return 'uz_UZ';
+            default: return 'en_US';
+        }
+    };
+
+    const handleGetDirections = () => {
+        // Shota Rustaveli 150 coordinates
+        const lat = 41.260000;
+        const lon = 69.223799;
+        const url = `https://yandex.uz/maps/?rtext=~${lat}%2C${lon}&rtt=auto`;
+        window.open(url, '_blank');
+    };
+
     return (
         <>
             <Header />
@@ -20,7 +39,7 @@ export default function ContactPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            Contact us
+                            {t.contact.title}
                         </motion.h1>
                         <motion.div
                             className={styles.breadcrumb}
@@ -28,9 +47,9 @@ export default function ContactPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                            <Link href="/">Home</Link>
+                            <Link href="/">{t.nav.home}</Link>
                             <span>-</span>
-                            <span className={styles.breadcrumbActive}>Contact us</span>
+                            <span className={styles.breadcrumbActive}>{t.contact.title}</span>
                         </motion.div>
                     </div>
                 </section>
@@ -55,7 +74,7 @@ export default function ContactPage() {
                                         </div>
                                         <div className={styles.infoText}>
                                             <h4>Corporate Office</h4>
-                                            <p>улица Шота Руставели, 150<br />Tashkent, Uzbekistan</p>
+                                            <p>{t.contact.address}<br />{t.contact.tashkent}, Uzbekistan</p>
                                         </div>
                                     </div>
 
@@ -141,7 +160,7 @@ export default function ContactPage() {
                     <div className={styles.mapWrapper}>
                         <div className={styles.mapContainer}>
                             <iframe
-                                src="https://yandex.uz/map-widget/v1/?ll=69.223799%2C41.260000&z=16&pt=69.223799%2C41.260000%2Cpm2rdm"
+                                src={`https://yandex.uz/map-widget/v1/?ll=69.223799%2C41.260000&z=16&pt=69.223799%2C41.260000%2Cpm2rdm&lang=${getMapLang()}`}
                                 width="100%"
                                 height="100%"
                                 frameBorder="0"
@@ -158,29 +177,29 @@ export default function ContactPage() {
                                 transition={{ duration: 0.6, delay: 0.8 }}
                             >
                                 <div className={styles.cardHeader}>
-                                    <h3>улица Шота Руставели, 150</h3>
-                                    <p>Ташкент</p>
+                                    <h3>{t.contact.address}</h3>
+                                    <p>{t.contact.tashkent}</p>
                                     <button className={styles.closeBtn}>×</button>
                                 </div>
 
                                 <div className={styles.metroList}>
                                     <div className={styles.metroItem}>
                                         <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
-                                        <span>Чиланзар</span>
+                                        <span>{t.contact.metro.chilonzor}</span>
                                         <span className={styles.distance}>
                                             <Footprints size={14} /> 2,45 км
                                         </span>
                                     </div>
                                     <div className={styles.metroItem}>
                                         <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
-                                        <span>Алмазар</span>
+                                        <span>{t.contact.metro.olmazor}</span>
                                         <span className={styles.distance}>
                                             <Footprints size={14} /> 2,72 км
                                         </span>
                                     </div>
                                     <div className={styles.metroItem}>
                                         <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
-                                        <span>Мирзо Улугбек</span>
+                                        <span>{t.contact.metro.mirzoUlugbek}</span>
                                         <span className={styles.distance}>
                                             <Footprints size={14} /> 3,4 км
                                         </span>
@@ -188,8 +207,13 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className={styles.cardButtons}>
-                                    <button className={styles.primaryBtn}>Организации в доме</button>
-                                    <button className={styles.secondaryBtn}>Сообщить об ошибке</button>
+                                    <button
+                                        className={styles.primaryBtn}
+                                        onClick={handleGetDirections}
+                                    >
+                                        {t.contact.buttons.directions}
+                                    </button>
+                                    <button className={styles.secondaryBtn}>{t.contact.buttons.reportError}</button>
                                 </div>
                             </motion.div>
                         </div>

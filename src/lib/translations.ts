@@ -139,6 +139,20 @@ export const translations = {
             employerDashboard: "Employer Dashboard",
             pricing: "Pricing Plans",
             rights: "All Rights Reserved."
+        },
+        contact: {
+            title: "Contact us",
+            address: "Shota Rustaveli Street, 150",
+            tashkent: "Tashkent",
+            metro: {
+                chilonzor: "Chilonzor",
+                olmazor: "Olmazor",
+                mirzoUlugbek: "Mirzo Ulugbek"
+            },
+            buttons: {
+                directions: "Get Directions",
+                reportError: "Report an error"
+            }
         }
     },
     uz: {
@@ -281,6 +295,20 @@ export const translations = {
             employerDashboard: "Ish beruvchi paneli",
             pricing: "Tariflar",
             rights: "Barcha huquqlar himoyalangan."
+        },
+        contact: {
+            title: "Biz bilan bog'lanish",
+            address: "Shota Rustaveli ko'chasi, 150",
+            tashkent: "Toshkent",
+            metro: {
+                chilonzor: "Chilonzor",
+                olmazor: "Olmazor",
+                mirzoUlugbek: "Mirzo Ulug'bek"
+            },
+            buttons: {
+                directions: "Yo'nalish tuzish",
+                reportError: "Xatolik haqida xabar berish"
+            }
         }
     },
     ru: {
@@ -423,6 +451,20 @@ export const translations = {
             employerDashboard: "Панель работодателя",
             pricing: "Тарифные планы",
             rights: "Все права защищены."
+        },
+        contact: {
+            title: "Свяжитесь с нами",
+            address: "улица Шота Руставели, 150",
+            tashkent: "Ташкент",
+            metro: {
+                chilonzor: "Чиланзар",
+                olmazor: "Алмазар",
+                mirzoUlugbek: "Мирзо Улугбек"
+            },
+            buttons: {
+                directions: "Построить маршрут",
+                reportError: "Сообщить об ошибке"
+            }
         }
     }
 };
