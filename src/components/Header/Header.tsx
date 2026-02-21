@@ -65,13 +65,13 @@ const Header = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 15 }}
                                     >
-                                        <Link href="/solutions">Our Solutions</Link>
-                                        <Link href="/executive-search">Executive Search</Link>
-                                        <Link href="/training">Training Session</Link>
-                                        <Link href="/career-growth">Career Growth</Link>
-                                        <Link href="/payroll">Payroll Services</Link>
-                                        <Link href="/workforce">Workforce System</Link>
-                                        <Link href="/temporary-jobs">Temporary Jobs</Link>
+                                        <Link href="/solutions">{t.nav.ourSolutions}</Link>
+                                        <Link href="/executive-search">{t.nav.executiveSearch}</Link>
+                                        <Link href="/training">{t.nav.trainingSession}</Link>
+                                        <Link href="/career-growth">{t.nav.careerGrowth}</Link>
+                                        <Link href="/payroll">{t.nav.payrollServices}</Link>
+                                        <Link href="/workforce">{t.nav.workforceSystem}</Link>
+                                        <Link href="/temporary-jobs">{t.nav.temporaryJobs}</Link>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -81,7 +81,7 @@ const Header = () => {
                             onMouseEnter={() => setIsPagesOpen(true)}
                             onMouseLeave={() => setIsPagesOpen(false)}
                         >
-                            <Link href="#">Pages <ChevronDown size={14} /></Link>
+                            <Link href="#">{t.nav.pages} <ChevronDown size={14} /></Link>
                             <AnimatePresence>
                                 {isPagesOpen && (
                                     <motion.div
@@ -90,12 +90,12 @@ const Header = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 15 }}
                                     >
-                                        <Link href="/about">About Us</Link>
-                                        <Link href="/recruitment">Recruitment</Link>
-                                        <Link href="/consulting">Consulting</Link>
-                                        <Link href="/outsourcing">Outsourcing</Link>
-                                        <Link href="/contact">Contact</Link>
-                                        <Link href="/jobs">Jobs List</Link>
+                                        <Link href="/about">{t.nav.about}</Link>
+                                        <Link href="/recruitment">{t.nav.recruitment}</Link>
+                                        <Link href="/consulting">{t.nav.consulting}</Link>
+                                        <Link href="/outsourcing">{t.nav.outsourcing}</Link>
+                                        <Link href="/contact">{t.nav.contact}</Link>
+                                        <Link href="/jobs">{t.nav.jobsList}</Link>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -117,7 +117,7 @@ const Header = () => {
                                 >
                                     <input
                                         type="text"
-                                        placeholder="Search..."
+                                        placeholder={t.nav.search}
                                         autoFocus
                                         className={styles.searchInput}
                                     />
@@ -177,7 +177,7 @@ const Header = () => {
 
                     {/* Mobile: Resume Maker CTA + Hamburger */}
                     <Link href="/cv-builder" className={styles.mobileResumeBtn}>
-                        Rezyume Maker
+                        {t.nav.resumeMaker}
                     </Link>
 
                     <button
