@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
+import { MapPin, Phone, Mail, Navigation, Footprints } from 'lucide-react';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import { motion } from 'framer-motion';
@@ -55,7 +55,7 @@ export default function ContactPage() {
                                         </div>
                                         <div className={styles.infoText}>
                                             <h4>Corporate Office</h4>
-                                            <p>Amir Temur Street,<br />Tashkent, Uzbekistan</p>
+                                            <p>Shota Rustaveli Street, 150<br />Tashkent, Uzbekistan</p>
                                         </div>
                                     </div>
 
@@ -139,15 +139,60 @@ export default function ContactPage() {
                 {/* Map Section */}
                 <section className={styles.mapSection}>
                     <div className={styles.mapWrapper}>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0654568811574!2d69.2787567!3d41.311151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-                            width="100%"
-                            height="450"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                        <div className={styles.mapContainer}>
+                            <iframe
+                                src="https://yandex.uz/map-widget/v1/-/CDg3sE4b"
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+
+                            {/* Yandex Info Card Overlay - Replicating the screenshot */}
+                            <motion.div
+                                className={styles.yandexCard}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 0.8 }}
+                            >
+                                <div className={styles.cardHeader}>
+                                    <h3>улица Шота Руставели, 150</h3>
+                                    <p>Ташкент</p>
+                                    <button className={styles.closeBtn}>×</button>
+                                </div>
+
+                                <div className={styles.metroList}>
+                                    <div className={styles.metroItem}>
+                                        <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
+                                        <span>Чиланзар</span>
+                                        <span className={styles.distance}>
+                                            <Footprints size={14} /> 2,45 км
+                                        </span>
+                                    </div>
+                                    <div className={styles.metroItem}>
+                                        <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
+                                        <span>Алмазар</span>
+                                        <span className={styles.distance}>
+                                            <Footprints size={14} /> 2,72 км
+                                        </span>
+                                    </div>
+                                    <div className={styles.metroItem}>
+                                        <div className={styles.metroIcon} style={{ background: '#ef4444' }}>M</div>
+                                        <span>Мирзо Улугбек</span>
+                                        <span className={styles.distance}>
+                                            <Footprints size={14} /> 3,4 км
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className={styles.cardButtons}>
+                                    <button className={styles.primaryBtn}>Организации в доме</button>
+                                    <button className={styles.secondaryBtn}>Сообщить об ошибке</button>
+                                </div>
+                            </motion.div>
+                        </div>
                     </div>
                 </section>
             </main>
