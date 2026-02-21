@@ -2,6 +2,11 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 
+import { db } from "@/lib/db";
+import { users, accounts } from "@/lib/db/schema";
+import { eq, and } from "drizzle-orm";
+import bcrypt from "bcrypt";
+
 const handler = NextAuth({
     providers: [
         GoogleProvider({
@@ -15,17 +20,48 @@ const handler = NextAuth({
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials) {
-                // Bu yerda foydalanuvchini bazadan tekshirish logikasi bo'ladi
-                // Hozircha namunaviy (mock) foydalanuvchi qaytaramiz
-                if (credentials?.email === "admin@hirezone.uz" && credentials?.password === "password123") {
-                    return { id: "1", name: "Admin", email: "admin@hirezone.uz" };
-                }
-                return null;
+                if (!credentials?.email || !credentials?.password) return null;
+
+                // Find user in db
+                const user = await db.query.users.findFirst({
+                    where: eq(users.email, credentials.email),
+                });
+
+                if (!user) return null;
+
+                // Find account and check password
+                const account = await db.query.accounts.findFirst({
+                    where: and(
+                        eq(accounts.userId, user.id),
+                        eq(accounts.providerId, "credentials")
+                    ),
+                });
+
+                if (!account || !account.password) return null;
+
+                const isPasswordValid = await bcrypt.compare(credentials.password, account.password);
+
+                if (!isPasswordValid) return null;
+
+                return {
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    image: user.image,
+                };
             }
         })
     ],
     pages: {
         signIn: '/login',
+    },
+    callbacks: {
+        async session({ session, token }) {
+            if (token && session.user) {
+                (session.user as any).id = token.sub;
+            }
+            return session;
+        },
     },
     secret: process.env.NEXTAUTH_SECRET,
 });

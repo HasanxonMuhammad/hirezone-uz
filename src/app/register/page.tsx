@@ -7,10 +7,56 @@ import { motion } from 'framer-motion';
 import styles from './Register.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 export default function RegisterPage() {
     const [role, setRole] = useState<'candidate' | 'employer'>('candidate');
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+    });
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
     const { t } = useLanguage();
+    const router = useRouter();
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError('');
+
+        if (formData.password !== formData.confirmPassword) {
+            setError('Passwords do not match');
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const res = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...formData, role }),
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                router.push('/login?registered=true');
+            } else {
+                setError(data.error || 'Something went wrong');
+            }
+        } catch (err) {
+            setError('Network error, please try again');
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <div className={styles.registerPage}>
@@ -26,6 +72,8 @@ export default function RegisterPage() {
 
                 <h1>{t.auth.registerTitle}</h1>
                 <p>{t.auth.registerSubtitle}</p>
+
+                {error && <div className={styles.errorMessage}>{error}</div>}
 
                 <div className={styles.socialAuth}>
                     <button
@@ -63,34 +111,34 @@ export default function RegisterPage() {
                     </div>
                 </div>
 
-                <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.inputGroup}>
                         <label htmlFor="firstName">{t.auth.firstName}</label>
-                        <input type="text" id="firstName" placeholder="John" required />
+                        <input type="text" id="firstName" value={formData.firstName} onChange={handleChange} placeholder="John" required />
                     </div>
 
                     <div className={styles.inputGroup}>
                         <label htmlFor="lastName">{t.auth.lastName}</label>
-                        <input type="text" id="lastName" placeholder="Doe" required />
+                        <input type="text" id="lastName" value={formData.lastName} onChange={handleChange} placeholder="Doe" required />
                     </div>
 
                     <div className={`${styles.inputGroup} ${styles.fullWidth}`}>
                         <label htmlFor="email">{t.auth.email}</label>
-                        <input type="email" id="email" placeholder="name@example.com" required />
+                        <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder="name@example.com" required />
                     </div>
 
                     <div className={styles.inputGroup}>
                         <label htmlFor="password">{t.auth.password}</label>
-                        <input type="password" id="password" placeholder="••••••••" required />
+                        <input type="password" id="password" value={formData.password} onChange={handleChange} placeholder="••••••••" required />
                     </div>
 
                     <div className={styles.inputGroup}>
                         <label htmlFor="confirmPassword">{t.auth.confirmPassword}</label>
-                        <input type="password" id="confirmPassword" placeholder="••••••••" required />
+                        <input type="password" id="confirmPassword" value={formData.confirmPassword} onChange={handleChange} placeholder="••••••••" required />
                     </div>
 
-                    <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
-                        {t.auth.registerBtn}
+                    <button type="submit" disabled={loading} className={`btn btn-primary ${styles.submitBtn}`}>
+                        {loading ? '...' : t.auth.registerBtn}
                     </button>
                 </form>
 

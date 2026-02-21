@@ -136,3 +136,23 @@
     color: var(--primary);
     font-weight: 600;
 }
+
+.errorMessage {
+    background: #fef2f2;
+    color: #b91c1c;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #fecaca;
+}
+
+.successMessage {
+    background: #f0fdf4;
+    color: #15803d;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #bbf7d0;
+}

@@ -1,15 +1,49 @@
 "use client";
-// v1.0.1 - force redeploy
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import styles from './Login.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import { signIn } from 'next-auth/react';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function LoginPage() {
     const { t } = useLanguage();
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        if (searchParams.get('registered')) {
+            setSuccess('Registration successful! Please login.');
+        }
+    }, [searchParams]);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+        setSuccess('');
+
+        const result = await signIn('credentials', {
+            redirect: false,
+            email,
+            password,
+        });
+
+        if (result?.error) {
+            setError('Invalid email or password');
+            setLoading(false);
+        } else {
+            router.push('/');
+        }
+    };
 
     return (
         <div className={styles.loginPage}>
@@ -25,6 +59,9 @@ export default function LoginPage() {
 
                 <h1>{t.auth.loginTitle}</h1>
                 <p>{t.auth.loginSubtitle}</p>
+
+                {error && <div className={styles.errorMessage}>{error}</div>}
+                {success && <div className={styles.successMessage}>{success}</div>}
 
                 <div className={styles.socialAuth}>
                     <button
@@ -45,23 +82,23 @@ export default function LoginPage() {
                     <span>{t.auth.or}</span>
                 </div>
 
-                <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.inputGroup}>
                         <label htmlFor="email">{t.auth.email}</label>
-                        <input type="email" id="email" placeholder="name@example.com" required />
+                        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@example.com" required />
                     </div>
 
                     <div className={styles.inputGroup}>
                         <label htmlFor="password">{t.auth.password}</label>
-                        <input type="password" id="password" placeholder="••••••••" required />
+                        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••••" required />
                     </div>
 
                     <Link href="/forgot-password" className={styles.forgotPassword}>
                         {t.auth.forgotPassword}
                     </Link>
 
-                    <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
-                        {t.auth.loginBtn}
+                    <button type="submit" disabled={loading} className={`btn btn-primary ${styles.submitBtn}`}>
+                        {loading ? '...' : t.auth.loginBtn}
                     </button>
                 </form>
 
