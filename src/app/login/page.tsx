@@ -54,7 +54,7 @@ function LoginForm() {
                 transition={{ duration: 0.5 }}
             >
                 <Link href="/" className={styles.logo}>
-                    <Image src="/logo.svg" alt="HireZone Logo" width={160} height={54} priority />
+                    <Image src="/logo.svg" alt="HireZone Logo" width={120} height={40} priority />
                 </Link>
 
                 <h1>{t.auth.loginTitle}</h1>

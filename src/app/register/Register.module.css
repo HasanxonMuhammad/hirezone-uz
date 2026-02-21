@@ -27,9 +27,8 @@
 }
 
 .logo img {
-    width: auto;
-    height: auto;
     max-width: 100%;
+    display: block;
 }
 
 .card h1 {
