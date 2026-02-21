@@ -37,14 +37,14 @@
     align-items: center;
     height: 100%;
     position: relative;
-    left: -35px;
-    /* Visually moves logo left without pushing the Nav list */
+    left: -50px;
+    /* Moved further left as requested */
 }
 
 .logoImage {
     transition: all 0.4s ease;
-    width: 180px;
-    /* Increased to make it more visible */
+    width: 170px;
+    /* Slightly decreased for balance */
     height: auto;
     display: block;
     object-fit: contain;
@@ -73,6 +73,8 @@
 /* 5. NAVIGATSIYA */
 .nav {
     flex-grow: 1;
+    margin-left: 30px;
+    /* Pushes links to the right, away from logo */
 }
 
 .nav ul {
