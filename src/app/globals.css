@@ -2,21 +2,45 @@
 
 :root {
   --primary: #00bf63;
-  /* Vibrant green from SVG */
-  --primary-hover: #00a052;
+  --primary-hover: #008f4a;
   --secondary: #3c375b;
   --dark: #1d1b2e;
   --dark-green: #1a3a2a;
-  /* Dark forest green for hero */
+  --header-height: 80px;
+  --font-jost: 'Jost', sans-serif;
+}
+
+[data-theme='light'] {
+  --bg: #ffffff;
   --text: #666666;
   --heading: #3c375b;
-  --bg-light: #f5fafd;
   --white: #ffffff;
+  --header-bg: #ffffff;
   --border: #eeeeee;
+  --input-bg: #f5fafd;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  --header-height: 80px;
+}
 
-  --font-jost: 'Jost', sans-serif;
+[data-theme='dark'] {
+  --bg: #0f111a;
+  --text: #a0aec0;
+  --heading: #ffffff;
+  --white: #1a202c;
+  --header-bg: #0f111a;
+  --border: #2d3748;
+  --input-bg: #2d3748;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='sepia'] {
+  --bg: #f4ecdb;
+  --text: #5b4636;
+  --heading: #433422;
+  --white: #fdf6e3;
+  --header-bg: #eee8d5;
+  --border: #d3c6aa;
+  --input-bg: #eee8d5;
+  --shadow: 0 4px 20px rgba(67, 52, 34, 0.1);
 }
 
 * {
@@ -31,8 +55,9 @@ body {
   overflow-x: hidden;
   font-family: var(--font-jost);
   color: var(--text);
-  background: var(--white);
+  background: var(--bg);
   line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1,

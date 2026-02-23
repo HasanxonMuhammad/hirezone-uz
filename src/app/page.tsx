@@ -7,6 +7,7 @@ import IndustriesServed from '@/components/IndustriesServed/IndustriesServed';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import AboutSection from '@/components/AboutSection/AboutSection';
 import LatestJobs from '@/components/LatestJobs/LatestJobs';
+import SolutionsHome from '@/components/SolutionsHome/SolutionsHome';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import ResumeMaker from '@/components/ResumeMaker/ResumeMaker';
 import Footer from '@/components/Footer/Footer';
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <Hero />
       <LatestJobs />
+      <SolutionsHome />
       <IndustriesServed />
       <HowItWorks />
       <AboutSection />

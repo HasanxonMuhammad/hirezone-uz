@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
-
+import { ThemeProvider } from "@/context/ThemeContext";
 import Preloader from "@/components/Preloader/Preloader";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import MobileBottomNav from "@/components/MobileBottomNav/MobileBottomNav";
@@ -44,12 +44,14 @@ export default function RootLayout({
     <html lang="uz" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <LanguageProvider>
-          <AuthProvider>
-            <Preloader />
-            {children}
-            <ScrollToTop />
-            <MobileBottomNav />
-          </AuthProvider>
+          <ThemeProvider>
+            <AuthProvider>
+              <Preloader />
+              {children}
+              <ScrollToTop />
+              <MobileBottomNav />
+            </AuthProvider>
+          </ThemeProvider>
         </LanguageProvider>
       </body>
     </html>

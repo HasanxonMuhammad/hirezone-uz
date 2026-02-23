@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Search as SearchIcon, ChevronDown, Globe } from 'lucide-react';
+import { Menu, X, Search as SearchIcon, ChevronDown, Globe, LogOut, Settings, User as UserIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
 import { useLanguage } from '@/context/LanguageContext';
@@ -16,6 +16,7 @@ const Header = () => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isPagesOpen, setIsPagesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const { language, setLanguage, t } = useLanguage();
     const { data: session } = useSession();
@@ -68,7 +69,7 @@ const Header = () => {
                                         exit={{ opacity: 0, y: 15 }}
                                     >
                                         <Link href="/solutions">{t.nav.ourSolutions}</Link>
-                                        <Link href="/executive-search">{t.nav.executiveSearch}</Link>
+                                        <Link href="/solutions">{t.nav.executiveSearch}</Link>
                                         <Link href="/training">{t.nav.trainingSession}</Link>
                                         <Link href="/career-growth">{t.nav.careerGrowth}</Link>
                                         <Link href="/payroll">{t.nav.payrollServices}</Link>
@@ -174,17 +175,51 @@ const Header = () => {
 
                     <div className={`${styles.primaryActions} ${isSearchOpen ? styles.primaryHidden : ''}`}>
                         {session ? (
-                            <div className={styles.userProfile}>
-                                <div className={styles.userAvatar}>
-                                    {session.user?.image ? (
-                                        <Image src={session.user.image} alt="User" width={32} height={32} />
-                                    ) : (
-                                        <div className={styles.avatarPlaceholder}>{session.user?.name?.charAt(0)}</div>
-                                    )}
-                                </div>
-                                <button onClick={() => signOut()} className={styles.logoutBtn}>
-                                    Logout
+                            <div className={styles.userProfileWrapper}>
+                                <button
+                                    className={styles.userProfileTrigger}
+                                    onClick={() => setIsProfileOpen(!isProfileOpen)}
+                                >
+                                    <div className={styles.userAvatar}>
+                                        {session.user?.image ? (
+                                            <Image src={session.user.image} alt="User" width={32} height={32} />
+                                        ) : (
+                                            <div className={styles.avatarPlaceholder}>{session.user?.name?.charAt(0)}</div>
+                                        )}
+                                    </div>
+                                    <ChevronDown size={14} className={`${styles.profileChevron} ${isProfileOpen ? styles.rotate180 : ''}`} />
                                 </button>
+
+                                <AnimatePresence>
+                                    {isProfileOpen && (
+                                        <motion.div
+                                            className={styles.profileDropdown}
+                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            <div className={styles.profileHeader}>
+                                                <span className={styles.userName}>{session.user?.name}</span>
+                                                <span className={styles.userEmail}>{session.user?.email}</span>
+                                            </div>
+                                            <div className={styles.dropdownDivider}></div>
+                                            <Link href="/settings" className={styles.profileItem} onClick={() => setIsProfileOpen(false)}>
+                                                <UserIcon size={16} />
+                                                <span>{t.nav.profile || 'Profil'}</span>
+                                            </Link>
+                                            <Link href="/settings" className={styles.profileItem} onClick={() => setIsProfileOpen(false)}>
+                                                <Settings size={16} />
+                                                <span>{t.nav.settings || 'Sozlamalar'}</span>
+                                            </Link>
+                                            <div className={styles.dropdownDivider}></div>
+                                            <button onClick={() => signOut()} className={`${styles.profileItem} ${styles.logoutItem}`}>
+                                                <LogOut size={16} />
+                                                <span>Logout</span>
+                                            </button>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         ) : (
                             <>

@@ -24,7 +24,9 @@ export const translations = {
             search: "Search...",
             resumeMaker: "Resume Maker",
             hireTalent: "Hire Talent",
-            findJob: "Find Job"
+            findJob: "Find Job",
+            profile: "Profile",
+            settings: "Settings"
         },
         hero: {
             title: "Professional Solutions for",
@@ -188,6 +190,23 @@ export const translations = {
             registerBtn: "Register Now",
             hasAccount: "Already have an account?",
             loginHere: "Login here"
+        },
+        solutionsPage: {
+            processTitle: "The Executive Search Process for Optimal Results",
+            processText1: "The executive search process is meticulously designed to identify and attract top-tier leadership talent that aligns with an organization’s strategic goals. It begins with a thorough understanding of the company’s needs, culture, and long-term vision, ensuring that the search is precisely targeted.",
+            processText2: "Leveraging an extensive network and advanced assessment tools, executive search firms meticulously evaluate candidates’ qualifications, experience, and leadership capabilities. The process includes rigorous interviews, reference checks, and often psychometric testing to ensure a comprehensive evaluation.",
+            leadersTitle: "Finding You The Leaders Of Tomorrow",
+            leadersText: "Our approach focuses on the future. We don't just find people who can do the job today, but leaders who will drive your company forward for years to come.",
+            feature1Title: "Short Time Hiring",
+            feature1Text: "Identifying urgent leadership needs and delivering qualified candidates in record time without compromising quality.",
+            feature2Title: "Last Minute Hiring",
+            feature2Text: "Specialized search for critical roles that need immediate replacement to ensure business continuity.",
+            feature3Title: "Immediate Hiring",
+            feature3Text: "Direct placement strategies for companies ready to expand or fill vacancies at the highest levels instantly.",
+            sidebarTitle: "Our Solutions",
+            needHelpTitle: "Need Help?",
+            needHelpText: "Speak with a human to learn more about our HR solutions.",
+            downloadBrochure: "Download Brochure"
         }
     },
     uz: {
@@ -215,7 +234,9 @@ export const translations = {
             search: "Qidirish...",
             resumeMaker: "Rezyume Maker",
             hireTalent: "Ishchi yollash",
-            findJob: "Ish topish"
+            findJob: "Ish topish",
+            profile: "Profil",
+            settings: "Sozlamalar"
         },
         hero: {
             title: "Biznes va Karyera uchun",
@@ -379,6 +400,23 @@ export const translations = {
             registerBtn: "Ro'yxatdan o'tish",
             hasAccount: "Hisobingiz bormi?",
             loginHere: "Bu yerda kiring"
+        },
+        solutionsPage: {
+            processTitle: "Yuqori natijalar uchun Top-menejerlarni izlash jarayoni",
+            processText1: "Top-menejerlarni qidirish jarayoni tashkilotning strategik maqsadlariga mos keladigan eng yuqori darajadagi yetakchilik iste'dodlarini aniqlash va jalb qilish uchun sinchkovlik bilan ishlab chiqilgan. U kompaniyaning ehtiyojlari, madaniyati va uzoq muddatli istiqbollarini chuqur tushunishdan boshlanadi.",
+            processText2: "Keng tarmoqli aloqalar va ilg'or baholash vositalaridan foydalangan holda, biz nomzodlarning malakasi, tajribasi va yetakchilik qobiliyatlarini diqqat bilan baholaymiz. Jarayon har tomonlama baholashni ta'minlash uchun qat'iy intervyular va psixometrik testlarni o'z ichiga oladi.",
+            leadersTitle: "Siz uchun kelajak yetakchilarini topamiz",
+            leadersText: "Bizning yondashuvimiz kelajakka qaratilgan. Biz nafaqat bugungi kunda ishni bajara oladigan odamlarni, balki kompaniyangizni uzoq yillar davomida olg'a siljitadigan yetakchilarni topamiz.",
+            feature1Title: "Tezkor yollash",
+            feature1Text: "Shoshilinch yetakchilik ehtiyojlarini aniqlash va sifatga zarar yetkazmagan holda rekord vaqt ichida mos nomzodlarni taqdim etish.",
+            feature2Title: "So'nggi daqiqada yollash",
+            feature2Text: "Biznes uzluksizligini ta'minlash uchun zudlik bilan almashtirishni talab qiladigan muhim rollar uchun ixtisoslashgan qidiruv.",
+            feature3Title: "Zudlik bilan ishga joylashtirish",
+            feature3Text: "Kengayishga yoki yuqori lavozimlarni darhol to'ldirishga tayyor bo'lgan kompaniyalar uchun to'g'ridan-to'g'ri joylashtirish strategiyalari.",
+            sidebarTitle: "Bizning yechimlar",
+            needHelpTitle: "Yordam kerakmi?",
+            needHelpText: "HR yechimlarimiz haqida batafsil ma'lumot olish uchun mutaxassisimiz bilan bog'laning.",
+            downloadBrochure: "Broshurani yuklab olish"
         }
     },
     ru: {
@@ -406,7 +444,9 @@ export const translations = {
             search: "Поиск...",
             resumeMaker: "Конструктор резюме",
             hireTalent: "Нанять сотрудника",
-            findJob: "Найти работу"
+            findJob: "Найти работу",
+            profile: "Профиль",
+            settings: "Настройки"
         },
         hero: {
             title: "Профессиональные решения для",
@@ -570,6 +610,23 @@ export const translations = {
             registerBtn: "Зарегистрироваться",
             hasAccount: "Уже есть аккаунт?",
             loginHere: "Войти здесь"
+        },
+        solutionsPage: {
+            processTitle: "Процесс поиска руководителей для оптимальных результатов",
+            processText1: "Процесс поиска руководителей тщательно разработан для выявления и привлечения талантов высшего звена, которые соответствуют стратегическим целям организации. Он начинается с глубокого понимания потребностей, культуры и долгосрочного видения компании.",
+            processText2: "Используя обширную сеть контактов и передовые инструменты оценки, мы тщательно анализируем квалификацию, опыт и лидерские качества кандидатов. Процесс включает строгие интервью и психометрическое тестирование для обеспечения комплексной оценки.",
+            leadersTitle: "Находим для вас лидеров будущего",
+            leadersText: "Наш подход ориентирован на будущее. Мы находим не просто людей, которые могут выполнять работу сегодня, а лидеров, которые будут вести вашу компанию вперед долгие годы.",
+            feature1Title: "Срочный найм",
+            feature1Text: "Выявление насущных потребностей в руководстве и предоставление квалифицированных кандидатов в рекордные сроки без ущерба для качества.",
+            feature2Title: "Найм в последний момент",
+            feature2Text: "Специализированный поиск для критически важных ролей, требующих немедленной замены для обеспечения непрерывности бизнеса.",
+            feature3Title: "Мгновенное размещение",
+            feature3Text: "Стратегии прямого размещения для компаний, готовых к расширению или немедленному заполнению вакансий на высшем уровне.",
+            sidebarTitle: "Наши решения",
+            needHelpTitle: "Нужна помощь?",
+            needHelpText: "Свяжитесь с нашим экспертом, чтобы узнать больше о наших HR-решениях.",
+            downloadBrochure: "Скачать брошюру"
         }
     }
 };
