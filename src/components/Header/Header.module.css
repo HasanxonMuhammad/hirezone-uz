@@ -108,7 +108,7 @@
 }
 
 .nav ul li a:hover {
-    color: rgba(38, 71, 43);
+    color: #008000;
 }
 
 .nav ul li a:hover::after {
@@ -124,7 +124,7 @@
     left: 0;
     width: 0;
     height: 3px;
-    background: rgba(38, 71, 43);
+    background: #008000;
     transition: width 0.3s ease;
     border-radius: 100px;
 }
@@ -154,7 +154,7 @@
 }
 
 .searchBtn:hover {
-    color: rgba(38, 71, 43);
+    color: #008000;
 }
 
 .langWrapper {
@@ -177,8 +177,8 @@
 }
 
 .langBtn:hover {
-    border-color: rgba(38, 71, 43);
-    color: rgba(38, 71, 43);
+    border-color: #008000;
+    color: #008000;
 }
 
 .loginBtn {
@@ -191,7 +191,7 @@
 
 .getStartedBtn {
     text-decoration: none;
-    background: rgba(38, 71, 43);
+    background: #008000;
     color: #ffffff;
     padding: 12px 30px;
     border-radius: 50px;
@@ -199,7 +199,7 @@
     font-size: 15px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(38, 71, 43, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2);
 }
 
 .divider {
@@ -247,7 +247,7 @@
 
 .dropdown a:hover {
     background: #f8fafc !important;
-    color: rgba(38, 71, 43) !important;
+    color: #008000 !important;
     padding-left: 30px !important;
 }
 
@@ -307,13 +307,13 @@
 }
 
 .langDropdown button:hover {
-    background: rgba(38, 71, 43, 0.08);
-    color: rgba(38, 71, 43);
+    background: rgba(0, 128, 0, 0.08);
+    color: #008000;
 }
 
 .activeLang {
-    color: rgba(38, 71, 43) !important;
-    background: rgba(38, 71, 43, 0.05) !important;
+    color: #008000 !important;
+    background: rgba(0, 128, 0, 0.05) !important;
 }
 
 /* 7. MOBIL VERSIYA */
@@ -414,7 +414,7 @@
 }
 
 .mobileNavLink:hover {
-    color: rgba(38, 71, 43);
+    color: #008000;
     padding-left: 15px;
 }
 
@@ -444,14 +444,14 @@
 }
 
 .mobileLangBtn:hover {
-    border-color: rgba(38, 71, 43);
-    color: rgba(38, 71, 43);
+    border-color: #008000;
+    color: #008000;
 }
 
 .mobileLangActive {
-    background: rgba(38, 71, 43) !important;
+    background: #008000 !important;
     color: #ffffff !important;
-    border-color: rgba(38, 71, 43) !important;
+    border-color: #008000 !important;
 }
 
 .mobileMenuActions {
@@ -473,8 +473,8 @@
 }
 
 .mobileLoginBtn:hover {
-    border-color: rgba(38, 71, 43);
-    color: rgba(38, 71, 43);
+    border-color: #008000;
+    color: #008000;
 }
 
 .mobileGetStartedBtn {
@@ -485,10 +485,10 @@
     font-weight: 700;
     font-size: 16px;
     color: #ffffff;
-    background: rgba(38, 71, 43);
+    background: #008000;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(38, 71, 43, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.3);
 }
 
 .mobileGetStartedBtn:hover {
@@ -584,13 +584,13 @@
     height: 36px;
     border-radius: 50%;
     overflow: hidden;
-    background: rgba(38, 71, 43);
+    background: #008000;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: 700;
-    box-shadow: 0 2px 8px rgba(38, 71, 43, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 128, 0, 0.2);
 }
 
 .userAvatar img {
@@ -673,8 +673,8 @@
 }
 
 .profileItem:hover {
-    background: rgba(38, 71, 43, 0.06);
-    color: rgba(38, 71, 43);
+    background: rgba(0, 128, 0, 0.06);
+    color: #008000;
     transform: translateX(3px);
 }
 
