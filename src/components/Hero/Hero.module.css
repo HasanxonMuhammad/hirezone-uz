@@ -1,6 +1,6 @@
 .hero {
     padding: 180px 0 100px;
-    background-color: var(--dark-green);
+    background-color: #00b300;
     min-height: 100vh;
     display: flex;
     align-items: center;
