@@ -269,23 +269,23 @@
 }
 
 .btnHire {
-    background: var(--white);
-    color: #1a1a1a;
+    background: #ffffff;
+    color: #000000;
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
 }
 
 .btnFind {
-    background: var(--primary);
-    color: #1a1a1a;
-    box-shadow: 0 10px 25px rgba(0, 191, 99, 0.2);
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
 }
 
 .btnHire::before {
-    background: var(--primary);
+    background: #00b300;
 }
 
 .btnFind::before {
-    background: var(--white);
+    background: #00b300;
 }
 
 .btnMain::before {
