@@ -108,7 +108,7 @@
 }
 
 .nav ul li a:hover {
-    color: #355E3B;
+    color: #47ae37;
 }
 
 .nav ul li a:hover::after {
@@ -124,7 +124,7 @@
     left: 0;
     width: 0;
     height: 3px;
-    background: #355E3B;
+    background: #47ae37;
     transition: width 0.3s ease;
     border-radius: 100px;
 }
@@ -154,7 +154,7 @@
 }
 
 .searchBtn:hover {
-    color: #355E3B;
+    color: #47ae37;
 }
 
 .langWrapper {
@@ -177,8 +177,8 @@
 }
 
 .langBtn:hover {
-    border-color: #355E3B;
-    color: #355E3B;
+    border-color: #47ae37;
+    color: #47ae37;
 }
 
 .loginBtn {
@@ -191,7 +191,7 @@
 
 .getStartedBtn {
     text-decoration: none;
-    background: #355E3B;
+    background: #47ae37;
     color: #ffffff;
     padding: 12px 30px;
     border-radius: 50px;
@@ -199,7 +199,7 @@
     font-size: 15px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(53, 94, 59, 0.2);
+    box-shadow: 0 4px 15px rgba(71, 174, 55, 0.2);
 }
 
 .divider {
@@ -247,7 +247,7 @@
 
 .dropdown a:hover {
     background: #f8fafc !important;
-    color: #355E3B !important;
+    color: #47ae37 !important;
     padding-left: 30px !important;
 }
 
@@ -307,13 +307,13 @@
 }
 
 .langDropdown button:hover {
-    background: rgba(53, 94, 59, 0.08);
-    color: #355E3B;
+    background: rgba(71, 174, 55, 0.08);
+    color: #47ae37;
 }
 
 .activeLang {
-    color: #355E3B !important;
-    background: rgba(53, 94, 59, 0.05) !important;
+    color: #47ae37 !important;
+    background: rgba(71, 174, 55, 0.05) !important;
 }
 
 /* 7. MOBIL VERSIYA */
@@ -414,7 +414,7 @@
 }
 
 .mobileNavLink:hover {
-    color: #355E3B;
+    color: #47ae37;
     padding-left: 15px;
 }
 
@@ -444,14 +444,14 @@
 }
 
 .mobileLangBtn:hover {
-    border-color: #355E3B;
-    color: #355E3B;
+    border-color: #47ae37;
+    color: #47ae37;
 }
 
 .mobileLangActive {
-    background: #355E3B !important;
+    background: #47ae37 !important;
     color: #ffffff !important;
-    border-color: #355E3B !important;
+    border-color: #47ae37 !important;
 }
 
 .mobileMenuActions {
@@ -473,8 +473,8 @@
 }
 
 .mobileLoginBtn:hover {
-    border-color: #355E3B;
-    color: #355E3B;
+    border-color: #47ae37;
+    color: #47ae37;
 }
 
 .mobileGetStartedBtn {
@@ -485,10 +485,10 @@
     font-weight: 700;
     font-size: 16px;
     color: #ffffff;
-    background: #355E3B;
+    background: #47ae37;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(53, 94, 59, 0.3);
+    box-shadow: 0 4px 15px rgba(71, 174, 55, 0.3);
 }
 
 .mobileGetStartedBtn:hover {
@@ -584,13 +584,13 @@
     height: 36px;
     border-radius: 50%;
     overflow: hidden;
-    background: #355E3B;
+    background: #47ae37;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: 700;
-    box-shadow: 0 2px 8px rgba(53, 94, 59, 0.2);
+    box-shadow: 0 2px 8px rgba(71, 174, 55, 0.2);
 }
 
 .userAvatar img {
@@ -673,8 +673,8 @@
 }
 
 .profileItem:hover {
-    background: rgba(53, 94, 59, 0.06);
-    color: #355E3B;
+    background: rgba(71, 174, 55, 0.06);
+    color: #47ae37;
     transform: translateX(3px);
 }
 
