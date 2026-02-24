@@ -108,7 +108,7 @@
 }
 
 .nav ul li a:hover {
-    color: #26472b;
+    color: rgba(38, 71, 43);
 }
 
 .nav ul li a:hover::after {
@@ -124,7 +124,7 @@
     left: 0;
     width: 0;
     height: 3px;
-    background: #26472b;
+    background: rgba(38, 71, 43);
     transition: width 0.3s ease;
     border-radius: 100px;
 }
@@ -154,7 +154,7 @@
 }
 
 .searchBtn:hover {
-    color: #26472b;
+    color: rgba(38, 71, 43);
 }
 
 .langWrapper {
@@ -177,8 +177,8 @@
 }
 
 .langBtn:hover {
-    border-color: #26472b;
-    color: #26472b;
+    border-color: rgba(38, 71, 43);
+    color: rgba(38, 71, 43);
 }
 
 .loginBtn {
@@ -191,7 +191,7 @@
 
 .getStartedBtn {
     text-decoration: none;
-    background: #26472b;
+    background: rgba(38, 71, 43);
     color: #ffffff;
     padding: 12px 30px;
     border-radius: 50px;
@@ -247,7 +247,7 @@
 
 .dropdown a:hover {
     background: #f8fafc !important;
-    color: #26472b !important;
+    color: rgba(38, 71, 43) !important;
     padding-left: 30px !important;
 }
 
@@ -308,11 +308,11 @@
 
 .langDropdown button:hover {
     background: rgba(38, 71, 43, 0.08);
-    color: #26472b;
+    color: rgba(38, 71, 43);
 }
 
 .activeLang {
-    color: #26472b !important;
+    color: rgba(38, 71, 43) !important;
     background: rgba(38, 71, 43, 0.05) !important;
 }
 
@@ -414,7 +414,7 @@
 }
 
 .mobileNavLink:hover {
-    color: #26472b;
+    color: rgba(38, 71, 43);
     padding-left: 15px;
 }
 
@@ -444,14 +444,14 @@
 }
 
 .mobileLangBtn:hover {
-    border-color: #26472b;
-    color: #26472b;
+    border-color: rgba(38, 71, 43);
+    color: rgba(38, 71, 43);
 }
 
 .mobileLangActive {
-    background: #26472b !important;
+    background: rgba(38, 71, 43) !important;
     color: #ffffff !important;
-    border-color: #26472b !important;
+    border-color: rgba(38, 71, 43) !important;
 }
 
 .mobileMenuActions {
@@ -473,8 +473,8 @@
 }
 
 .mobileLoginBtn:hover {
-    border-color: #26472b;
-    color: #26472b;
+    border-color: rgba(38, 71, 43);
+    color: rgba(38, 71, 43);
 }
 
 .mobileGetStartedBtn {
@@ -485,7 +485,7 @@
     font-weight: 700;
     font-size: 16px;
     color: #ffffff;
-    background: #26472b;
+    background: rgba(38, 71, 43);
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(38, 71, 43, 0.3);
@@ -584,7 +584,7 @@
     height: 36px;
     border-radius: 50%;
     overflow: hidden;
-    background: #26472b;
+    background: rgba(38, 71, 43);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -674,7 +674,7 @@
 
 .profileItem:hover {
     background: rgba(38, 71, 43, 0.06);
-    color: #26472b;
+    color: rgba(38, 71, 43);
     transform: translateX(3px);
 }
 
