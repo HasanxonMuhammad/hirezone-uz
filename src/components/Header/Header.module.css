@@ -108,7 +108,7 @@
 }
 
 .nav ul li a:hover {
-    color: #008000;
+    color: #00b300;
 }
 
 .nav ul li a:hover::after {
@@ -124,7 +124,7 @@
     left: 0;
     width: 0;
     height: 3px;
-    background: #008000;
+    background: #00b300;
     transition: width 0.3s ease;
     border-radius: 100px;
 }
@@ -154,7 +154,7 @@
 }
 
 .searchBtn:hover {
-    color: #008000;
+    color: #00b300;
 }
 
 .langWrapper {
@@ -177,8 +177,8 @@
 }
 
 .langBtn:hover {
-    border-color: #008000;
-    color: #008000;
+    border-color: #00b300;
+    color: #00b300;
 }
 
 .loginBtn {
@@ -191,7 +191,7 @@
 
 .getStartedBtn {
     text-decoration: none;
-    background: #008000;
+    background: #00b300;
     color: #ffffff;
     padding: 12px 30px;
     border-radius: 50px;
@@ -199,7 +199,7 @@
     font-size: 15px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 179, 0, 0.2);
 }
 
 .divider {
@@ -247,7 +247,7 @@
 
 .dropdown a:hover {
     background: #f8fafc !important;
-    color: #008000 !important;
+    color: #00b300 !important;
     padding-left: 30px !important;
 }
 
@@ -307,13 +307,13 @@
 }
 
 .langDropdown button:hover {
-    background: rgba(0, 128, 0, 0.08);
-    color: #008000;
+    background: rgba(0, 179, 0, 0.08);
+    color: #00b300;
 }
 
 .activeLang {
-    color: #008000 !important;
-    background: rgba(0, 128, 0, 0.05) !important;
+    color: #00b300 !important;
+    background: rgba(0, 179, 0, 0.05) !important;
 }
 
 /* 7. MOBIL VERSIYA */
@@ -414,7 +414,7 @@
 }
 
 .mobileNavLink:hover {
-    color: #008000;
+    color: #00b300;
     padding-left: 15px;
 }
 
@@ -444,14 +444,14 @@
 }
 
 .mobileLangBtn:hover {
-    border-color: #008000;
-    color: #008000;
+    border-color: #00b300;
+    color: #00b300;
 }
 
 .mobileLangActive {
-    background: #008000 !important;
+    background: #00b300 !important;
     color: #ffffff !important;
-    border-color: #008000 !important;
+    border-color: #00b300 !important;
 }
 
 .mobileMenuActions {
@@ -473,8 +473,8 @@
 }
 
 .mobileLoginBtn:hover {
-    border-color: #008000;
-    color: #008000;
+    border-color: #00b300;
+    color: #00b300;
 }
 
 .mobileGetStartedBtn {
@@ -485,10 +485,10 @@
     font-weight: 700;
     font-size: 16px;
     color: #ffffff;
-    background: #008000;
+    background: #00b300;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 179, 0, 0.3);
 }
 
 .mobileGetStartedBtn:hover {
@@ -584,13 +584,13 @@
     height: 36px;
     border-radius: 50%;
     overflow: hidden;
-    background: #008000;
+    background: #00b300;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: 700;
-    box-shadow: 0 2px 8px rgba(0, 128, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 179, 0, 0.2);
 }
 
 .userAvatar img {
@@ -673,8 +673,8 @@
 }
 
 .profileItem:hover {
-    background: rgba(0, 128, 0, 0.06);
-    color: #008000;
+    background: rgba(0, 179, 0, 0.06);
+    color: #00b300;
     transform: translateX(3px);
 }
 
